@@ -11,7 +11,11 @@ README
 /hybris/data
 /hybris/log
 /hybris/roles
-/hybris/config
+/hybris/config/solr
+/hybris/config/license
+/hybris/config/languages
+/hybris/config/customize
+/hybris/config/tomcat
 /hybris/bin/idea-module-files
 /hybris/bin/idea-module-files
 /hybris/bin/platform
