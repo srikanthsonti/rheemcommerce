@@ -1,0 +1,15 @@
+# -----------------------------------------------------------------------
+# Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
+# -----------------------------------------------------------------------
+# ImpEx for Importing Category Classifications into Powertools Store (English)
+
+# Macros / Replacement Parameter definitions
+$productCatalog=solahartProductCatalog
+$productCatalogName=Solahart Product Catalog
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+$classCatalogVersion=catalogversion(catalog(id[default='SolahartClassification']),version[default='1.0'])[unique=true,default='SolahartClassification:1.0']
+$classSystemVersion=systemVersion(catalog(id[default='SolahartClassification']),version[default='1.0'])[unique=true]
+$class=classificationClass(ClassificationClass.code,$classCatalogVersion)[unique=true]
+
+$lang=en
+

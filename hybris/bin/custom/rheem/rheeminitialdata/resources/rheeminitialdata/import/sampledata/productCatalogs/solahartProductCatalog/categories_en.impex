@@ -1,0 +1,40 @@
+# -----------------------------------------------------------------------
+# Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
+# -----------------------------------------------------------------------
+# ImpEx for Importing Categories into Powertools Store
+
+
+# Macros / Replacement Parameter definitions
+$productCatalog=solahartProductCatalog
+$productCatalogName=Solahart Product Catalog
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+
+$lang=en
+
+UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang];description[lang=$lang]
+;1;;Open Catalogue;;
+;6011;;solar-water-heating;;
+;6012;;solahart-l-series;;
+;6013;;solahart-sp-series;;
+;6014;;solahart-lcsd-series;;
+;6015;;solahart-cs13c-series;;
+;6016;;solahart-l-series;;
+;6017;;rheem-52d-series;;
+;6018;;rheem-52c-series;;
+
+;7011;;split-system;;
+;7012;;streamline-mlv-series;;
+;7013;;streamline-mcs07v-series;;
+;7014;;rheem-premier-loline;;
+
+;8011;;solar-power;;
+;8012;;solahart-premium-pv-systems;;
+;8013;;solahart-silhouette-premium-plus-pv-systems-1;;
+;8014;;solahart-silhouette-platinum-optimised-pv-systems;;
+
+;9011;;battery-storage;;
+
+;10011;;heat-pump;;
+;10012;;solahart-atmos;;
+;10013;;pool-heat-pumps;;
+

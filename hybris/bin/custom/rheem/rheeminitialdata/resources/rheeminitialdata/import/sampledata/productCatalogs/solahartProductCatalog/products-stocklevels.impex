@@ -1,0 +1,28 @@
+# -----------------------------------------------------------------------
+# Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
+# -----------------------------------------------------------------------
+# ImpEx for Importing Products stock levels into Powertools Store
+
+# Macros / Replacement Parameter definitions
+$productCatalog=solahartProductCatalog
+$productCatalogName=Solahart Product Catalog
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+$vendor=solahart
+
+INSERT_UPDATE Warehouse;code[unique=true];name[lang=en]
+;pw_warehouse_s;Solahart Warehouse South
+;pw_warehouse_e;Solahart Warehouse East
+;pw_warehouse_w;Solahart Warehouse West
+;pw_warehouse_n;Solahart Warehouse North
+
+INSERT_UPDATE StockLevel;productCode[unique=true];warehouse(code)[unique=true,default=default];available;inStockStatus(code);maxPreOrder[default=1];maxStockLevelHistoryCount[default=-1];overSelling[default=0];preOrder[default=0];reserved[default=0]
+;prd1;pw_warehouse_s;414;notSpecified
+;prd2;pw_warehouse_e;228;notSpecified
+;prd3;pw_warehouse_n;335;notSpecified
+;prd4;pw_warehouse_w;161;notSpecified
+
+INSERT_UPDATE Product;code[unique=true];stockLevels(productCode,warehouse(code));vendors(code)[default=$vendor];$catalogVersion
+;prd1;prd1:pw_warehouse_s
+;prd2;prd2:pw_warehouse_e
+;prd3;prd3:pw_warehouse_n
+;prd4;prd4:pw_warehouse_w

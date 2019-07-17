@@ -1,0 +1,22 @@
+# -----------------------------------------------------------------------
+# Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
+# -----------------------------------------------------------------------
+# ImpEx for Importing Products into Powertools Store
+
+# Macros / Replacement Parameter definitions
+$productCatalog=solahartProductCatalog
+$productCatalogName=Solahart Product Catalog
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+$supercategories=supercategories(code, $catalogVersion)
+$baseProduct=baseProduct(code,$catalogVersion)
+$approved=approvalstatus(code)[default='approved']
+
+# Language
+$lang=en
+
+# Insert Products
+INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;ean;variantType(code);unit(code)[default=pieces];$catalogVersion
+;prd1;6012;Solahart;0601210601210
+;prd2;6012;Solahart;0601211601211
+;prd3;6013;Solahart;0601310601310
+;prd4;6013;Solahart;0601311601311

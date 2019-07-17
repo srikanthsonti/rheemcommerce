@@ -2,119 +2,60 @@
 <!--
  Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
 --><extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
-                                        	
-    
-    
-    
-    
-    
-    
-    
+                
     
     
     <extension abstractclassprefix="Generated" classprefix="RheemStorefront" name="rheemstorefront" usemaven="false">
-                                                                                		
-        
-        
-        
-        
-        
-        
-        
-        
+                                
         
         
         <requires-extension name="captchaaddon"/>
+                                
+        
+        
         <requires-extension name="assistedservicestorefront"/>
-                
+                                
+        
+        
         <requires-extension name="accountsummaryaddon"/>
-                        
+                                
+        
         
         <requires-extension name="b2boccaddon"/>
                                 
         
         
         <requires-extension name="savedorderformsoccaddon"/>
-                                        
-        
-        
-        
-        <requires-extension name="secureportaladdon"/>
-                                                
-        
+                                
         
         
         
         <requires-extension name="commerceorgaddon"/>
-                                                        
-        
-        
-        
+                                
         
         
         <requires-extension name="b2bacceleratoraddon"/>
-                                                                
-        
-        
-        
-        
+                                
         
         
         <requires-extension name="acceleratorstorefrontcommons"/>
-                                                                                		
-        
-        
-        
-        
-        
-        
-        
+                                
         
         
         <requires-extension name="rheemfacades"/>
-                                                                                		
-        
-        
-        
-        
-        
-        
-        
+                                
         
         
         <webmodule jspcompile="false" webroot="/rheemstorefront"/>
-                                                                                		
-        
-        		
-        
-        
-        
-        
-        
-        
-        
+                                
         
         
         <meta key="extgen-template-extension" value="true"/>
-                                                                                	
-    
-    
-    
-    
-    
-    
-    
+                            
     
     
     </extension>
-                                        
-
-
-
-
-
-
-
+            
 
 
 </extensioninfo>

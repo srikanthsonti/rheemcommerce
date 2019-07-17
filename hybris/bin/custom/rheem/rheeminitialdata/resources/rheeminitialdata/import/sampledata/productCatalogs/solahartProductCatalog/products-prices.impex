@@ -1,0 +1,20 @@
+# -----------------------------------------------------------------------
+# Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
+# -----------------------------------------------------------------------
+# ImpEx for Importing Powertools Store Prices
+#% impex.setLocale( Locale.GERMAN ); 
+
+$productCatalog=solahartProductCatalog
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default='$productCatalog:Staged']
+$prices=Europe1prices[translator=de.hybris.platform.europe1.jalo.impex.Europe1PricesTranslator]
+$taxGroup=Europe1PriceFactory_PTG(code)[default=us-sales-tax-full]
+
+# Set product approval status to Approved only for those products that have prices.
+$approved=approvalstatus(code)[default='approved']
+
+UPDATE Product;code[unique=true];$prices;$approved;$catalogVersion;$taxGroup
+;prd1;1 pieces = 117 USD N
+;prd2;1 pieces = 16 USD N, 10 pieces = 14,89 USD N, 30 pieces = 13,49 USD N, 50 pieces = 11,19 USD N, 100 pieces = 9,99 USD N
+;prd3;1 pieces = 21 USD N
+;prd4;1 pieces = 80 USD N
+

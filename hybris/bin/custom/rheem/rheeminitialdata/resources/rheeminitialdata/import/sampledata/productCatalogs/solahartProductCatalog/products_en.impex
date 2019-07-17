@@ -1,0 +1,18 @@
+# -----------------------------------------------------------------------
+# Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
+# -----------------------------------------------------------------------
+#UTF-8: √Ø¬ø¬Ω√Ø¬ø¬Ω√Ø¬ø¬Ω
+# Localization en
+
+# Macros / Replacement Parameter definitions
+$productCatalog=powertoolsProductCatalog
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+
+# Language
+$lang=en
+
+UPDATE Product;code[unique=true];name[lang=$lang];description[lang=$lang];summary[lang=$lang];$catalogVersion
+;prd1;181l;Solahart's roof mounted tank systems save space at ground level and their elegant simplicity make them efficient and reliable. The Solahart 181L Series is a roof mounted, open circuit solar water heater specifically designed to provide economical service in medium to high solar gain areas. The smaller volume of the 181L makes it ideal for applications where low volumes of solar hot water are required, e.g. small units or retirees.;180lt Roof Top Solar System
+;prd2;302l;Solahart's roof mounted tank systems save space at ground level and their elegant simplicity make them efficient and reliable. The Solahart 302L Series is a roof mounted, open circuit solar water heater specifically designed to provide economical service in medium to high solar gain areas.;300lt Roof Top Solar System
+;prd3;181sp;The 181SP solar water heater is specifically designed to provide economical service in medium to high solar gain areas, and is suitable for frost prone or harsh water quality areas. The 181SP series features the Australian designed and manufactured Envelope solar collector, offering the latest in styling and all weather durability. The smaller volume of the 181SP makes it ideal for applications where low volumes of solar hot water are required, e.g. small units or retirees.;180lt Roof Top Solar System
+;prd4;302sp;The Solahart 302SP solar water heater is specifically designed to provide economical service in medium to high solar gain areas, and is suitable for frost prone or harsh water quality areas. The 302SP series features the Australian designed and manufactured Envelope solar collector, offering the latest in styling and all weather durability.;300lt Roof Top Solar System

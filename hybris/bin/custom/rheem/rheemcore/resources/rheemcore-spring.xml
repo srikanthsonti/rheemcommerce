@@ -538,4 +538,37 @@
 		<property name="itemCleanupHooks" ref="csTicketRetentionHooks"/>
 		<property name="ticketBusinessService" ref="ticketBusinessService"/>
 	</bean>
+
+	<!-- Solr field value providers TEMPORARY FOR NOW SO DO NOT NEED TO DEPEND ON yb2bacceleratorcore -->
+
+	<bean id="solahartCategoryCodeValueProvider" parent="abstractCategoryCodeValueProvider">
+		<property name="categorySource" ref="solahartCategorySource"/>
+	</bean>
+	<bean id="solahartBrandCategoryCodeValueProvider" parent="abstractCategoryCodeValueProvider">
+		<property name="categorySource" ref="solahartBrandCategorySource"/>
+	</bean>
+	<bean id="solahartVariantCategoryCodeValueProvider" parent="abstractCategoryCodeValueProvider">
+		<property name="categorySource" ref="solahartVariantCategorySource"/>
+	</bean>
+
+
+	<bean id="solahartCategoryNameValueProvider" parent="abstractCategoryNameValueProvider">
+		<property name="categorySource" ref="solahartCategorySource"/>
+	</bean>
+
+	<bean id="solahartBrandCategoryNameValueProvider" parent="abstractCategoryNameValueProvider">
+		<property name="categorySource" ref="solahartBrandCategorySource"/>
+	</bean>
+
+	<bean id="solahartCategorySource" parent="variantCategorySource">
+		<property name="rootCategory" value="1"/> <!-- '1' is the root icecat category -->
+	</bean>
+	<bean id="solahartVariantCategorySource" parent="variantCategorySource"/>
+
+	<bean id="solahartBrandCategorySource" parent="defaultCategorySource">
+		<property name="rootCategory" value="brands"/> <!-- 'brands' is the root of the brands hierarchy -->
+	</bean>
+
+	<!-- Solr field value providers TEMPORARY FOR NOW SO DO NOT NEED TO DEPEND ON yb2bacceleratorcore -->
+
 </beans>

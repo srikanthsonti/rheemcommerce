@@ -15,7 +15,6 @@
     <extension name='b2bacceleratoraddon' />
     <extension name='commerceorgsamplesaddon' />
     <extension name='b2bpunchoutaddon' />
-    <extension name='secureportaladdon' />
     <extension name='savedorderformsoccaddon' />
     <extension name='b2boccaddon' />
     <extension name='accountsummaryaddon' />
@@ -74,6 +73,7 @@
     <extension name='rheemfulfilmentprocess' />
     <extension name='rheeminitialdata' />
     <extension name='rheemstorefront' />
+    <extension name='solahartstorefront' />
 
   </extensions>
 </hybrisconfig>

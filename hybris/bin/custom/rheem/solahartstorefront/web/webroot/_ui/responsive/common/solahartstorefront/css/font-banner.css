@@ -1,0 +1,10 @@
+@font-face{
+    font-family:"Myriad W01 Bd Cnd";
+    src:url("/Fonts/myriad-w01-bold-condensed/b4df0776-43d3-4954-9ef2-95527dcfb011.eot?#iefix");
+    src: 
+        url("/Fonts/myriad-w01-bold-condensed/b4df0776-43d3-4954-9ef2-95527dcfb011.eot?#iefix") format("eot"),
+        url("/Fonts/myriad-w01-bold-condensed/f3750fd8-e60c-4354-9fd6-584d74d1d19e.woff2") format("woff2"),
+        url("/Fonts/myriad-w01-bold-condensed/4823eae2-791d-4382-8ef0-5916b5b1623f.woff") format("woff"),
+        url("/Fonts/myriad-w01-bold-condensed/5f217c58-a6c1-4caa-a812-82aebe639d32.ttf") format("truetype"),
+        url("/Fonts/myriad-w01-bold-condensed/d13b5353-c61b-48c5-a822-a1ae523eddf6.svg#d13b5353-c61b-48c5-a822-a1ae523eddf6") format("svg");
+}
